@@ -16,45 +16,16 @@ st.set_page_config(
 # Sample Inventory Data
 # --------------------------------------------------
 
-inventory = pd.DataFrame({
-    "Product": [
-        "Rice 5kg",
-        "Wheat Flour 5kg",
-        "Cooking Oil 1L",
-        "Sugar 1kg",
-        "Milk 1L",
-        "Biscuits",
-        "Tea Powder",
-        "Coffee",
-        "Soap",
-        "Shampoo"
-    ],
-    "Category": [
-        "Groceries",
-        "Groceries",
-        "Groceries",
-        "Groceries",
-        "Dairy",
-        "Snacks",
-        "Beverages",
-        "Beverages",
-        "Personal Care",
-        "Personal Care"
-    ],
-    "Stock": [
-        45, 12, 8, 30, 6,
-        50, 15, 7, 25, 9
-    ],
-    "Reorder_Level": [
-        20, 15, 10, 15, 10,
-        20, 10, 10, 15, 10
-    ],
-    "Price": [
-        350, 280, 150, 55, 35,
-        30, 180, 250, 40, 220
-    ]
-})
+# --------------------------------------------------
+# Load Inventory Data
+# --------------------------------------------------
 
+@st.cache_data
+def load_inventory():
+    return pd.read_csv("data/inventory.csv")
+
+
+inventory = load_inventory()
 # --------------------------------------------------
 # Calculate Stock Status
 # --------------------------------------------------
