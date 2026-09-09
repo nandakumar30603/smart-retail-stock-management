@@ -1,0 +1,11 @@
+Product,Category,Stock,Reorder_Level,Price
+Rice 5kg,Groceries,45,20,350
+Wheat Flour 5kg,Groceries,12,15,280
+Cooking Oil 1L,Groceries,8,10,150
+Sugar 1kg,Groceries,30,15,55
+Milk 1L,Dairy,6,10,35
+Biscuits,Snacks,50,20,30
+Tea Powder,Beverages,15,10,180
+Coffee,Beverages,7,10,250
+Soap,Personal Care,25,15,40
+Shampoo,Personal Care,9,10,220
